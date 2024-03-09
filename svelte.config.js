@@ -1,13 +1,7 @@
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-import adapter from '@sveltejs/adapter-netlify';
-
+import adapter from '@sveltejs/adapter-vercel';
 export default {
 	kit: {
 		adapter: adapter({
-			edge: false,
-			split: false
 		})
-	},
-
-	preprocess: [vitePreprocess({})]
+	}
 };
