@@ -9,7 +9,9 @@
 		"test": "vitest",
 		"lint": "prettier --check .",
 		"format": "prettier --write .",
-		"postinstall": "prisma generate"
+		"postinstall": "prisma generate",
+		"postbuild": "cp prisma/schema.prisma",
+		"vercel-build" : "prisma migrate deploy && npm run build"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
