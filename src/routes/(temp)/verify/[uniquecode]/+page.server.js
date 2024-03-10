@@ -34,7 +34,7 @@ export async function load({ params, cookies, fetch }) {
             cookies.set('AuthorizationToken', result.authToken, {
                 path: '/',
                 httpOnly: true,
-                secure : false,
+                secure : true,
                 sameSite: 'strict',
                 maxAge: 60 * 60 * 24 // one day
             });
